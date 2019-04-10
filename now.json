@@ -1,5 +1,5 @@
 {
-    "name": "og-image",	 
+    "name": "myrent-og-image",
     "alias": [ "og-image.now.sh", "api-og-image.zeit.sh" ],
     "version": 2,
     "regions": ["all"],
@@ -14,6 +14,8 @@
         { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
         { "src": "/style.css", "dest": "/public/style.css" },
         { "src": "/dist/browser.js", "dest": "/browser.js" },
+        { "src": "/myrent-dark.svg", "dest": "public/myrent-dark.svg" },
+        { "src": "/myrent-light.svg", "dest": "public/myrent-light.svg" },
         { "src": "/(.+)", "dest": "/src/card.ts" }
     ]
 }

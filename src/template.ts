@@ -6,46 +6,34 @@ const twemoji = require('twemoji');
 const twOptions = { folder: 'svg', ext: '.svg' };
 const emojify = (text: string) => twemoji.parse(text, twOptions);
 
-const regular = readFileSync(`${__dirname}/../.fonts/Inter-Regular.woff2`).toString('base64');
-const bold = readFileSync(`${__dirname}/../.fonts/Inter-Bold.woff2`).toString('base64');
-const mono = readFileSync(`${__dirname}/../.fonts/Vera-Mono.woff2`).toString('base64');
+const regular = readFileSync(`${__dirname}/../.fonts/proximanova-regular-webfont.woff2`).toString('base64');
+const bold = readFileSync(`${__dirname}/../.fonts/proximanova-bold-webfont.woff2`).toString('base64');
 
 function getCss(theme: string, fontSize: string) {
     let background = 'white';
-    let foreground = 'black';
-    let radial = 'lightgray';
+    let foreground = '#008cb8';
 
     if (theme === 'dark') {
-        background = 'black';
+        background = '#008cb8';
         foreground = 'white';
-        radial = 'dimgray';
     }
     return `
     @font-face {
-        font-family: 'Inter';
+        font-family: 'Proxima Nova';
         font-style:  normal;
         font-weight: normal;
         src: url(data:font/woff2;charset=utf-8;base64,${regular}) format('woff2');
     }
 
     @font-face {
-        font-family: 'Inter';
+        font-family: 'Proxima Nova';
         font-style:  normal;
         font-weight: bold;
         src: url(data:font/woff2;charset=utf-8;base64,${bold}) format('woff2');
     }
 
-    @font-face {
-        font-family: 'Vera';
-        font-style: normal;
-        font-weight: normal;
-        src: url(data:font/woff2;charset=utf-8;base64,${mono})  format("woff2");
-      }
-
     body {
         background: ${background};
-        background-image: radial-gradient(${radial} 5%, transparent 0);
-        background-size: 60px 60px;
         height: 100vh;
         display: flex;
         text-align: center;
@@ -92,9 +80,9 @@ function getCss(theme: string, fontSize: string) {
         margin: 0 .05em 0 .1em;
         vertical-align: -0.1em;
     }
-    
+
     .heading {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Proxima Nova', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         color: ${foreground};

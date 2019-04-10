@@ -12,7 +12,7 @@ export function parseRequest(req: IncomingMessage) {
     if (Array.isArray(theme)) {
         throw new Error('Expected a single theme');
     }
-    
+
     const arr = pathname.slice(1).split('.');
     let extension = '';
     let text = '';
@@ -44,10 +44,10 @@ function getArray(stringOrArray: string[] | string): string[] {
 }
 
 function getDefaultImages(images: string[], theme: Theme): string[] {
-    if (images.length > 0 && images[0] && images[0].startsWith('https://assets.zeit.co/image/upload/front/assets/design/')) {
+    if (images.length > 0 && images[0] && images[0].startsWith('https://myrent-og-image.dwightwatson.now.sh/')) {
         return images;
     }
     return theme === 'light'
-    ? ['https://assets.zeit.co/image/upload/front/assets/design/now-black.svg']
-    : ['https://assets.zeit.co/image/upload/front/assets/design/now-white.svg'];
+    ? ['https://myrent-og-image.dwightwatson.now.sh/myrent-dark.svg']
+    : ['https://myrent-og-image.dwightwatson.now.sh/myrent-light.svg'];
 }
