@@ -1,6 +1,6 @@
 {
     "name": "og-image",
-    "alias": ["og-image.myrent.now.sh"],
+    "alias": ["og-image.my-rent.now.sh"],
     "version": 2,
     "regions": ["all"],
     "public": true,
