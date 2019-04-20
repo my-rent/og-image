@@ -140,11 +140,11 @@ const markdownOptions: DropdownOption[] = [
 ];
 
 const imageLightOptions: DropdownOption[] = [
-    { text: 'myRent', value: 'https://myrent-og-image.dwightwatson.now.sh/myrent-dark.svg' },
+    { text: 'myRent', value: 'https://og-image.my-rent.now.sh/myrent-dark.svg' },
 ];
 
 const imageDarkOptions: DropdownOption[] = [
-    { text: 'myRent', value: 'https://myrent-og-image.dwightwatson.now.sh/myrent-light.svg' },
+    { text: 'myRent', value: 'https://og-image.my-rent.now.sh/myrent-light.svg' },
 ];
 
 const widthOptions = [

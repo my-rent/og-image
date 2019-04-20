@@ -44,10 +44,10 @@ function getArray(stringOrArray: string[] | string): string[] {
 }
 
 function getDefaultImages(images: string[], theme: Theme): string[] {
-    if (images.length > 0 && images[0] && images[0].startsWith('https://myrent-og-image.dwightwatson.now.sh/')) {
+    if (images.length > 0 && images[0] && images[0].startsWith('https://og-image.my-rent.now.sh/')) {
         return images;
     }
     return theme === 'light'
-    ? ['https://myrent-og-image.dwightwatson.now.sh/myrent-dark.svg']
-    : ['https://myrent-og-image.dwightwatson.now.sh/myrent-light.svg'];
+    ? ['https://og-image.my-rent.now.sh/myrent-dark.svg']
+    : ['https://og-image.my-rent.now.sh/myrent-light.svg'];
 }
